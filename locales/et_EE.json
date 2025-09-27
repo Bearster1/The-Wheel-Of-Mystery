@@ -1,0 +1,8 @@
+{
+  "upgrade1": "Suurenda tõenäosust ühe võrra $upgrade1_cost mündi eest",
+  "upgrade2": "Vähenda tõenäosust ühe võrra $upgrade2_cost mündi eest",
+  "upgrade3": "Suurenda arvu ühe võrra $upgrade3_cost mündi eest",
+  "upgrade4": "Vähenda kulu ühe võrra $upgrade4_cost mündi eest",
+  "upgrade5": "Kustuta üks arv $upgrade5_cost mündi eest",
+  "message": "Sa said $number münti. Sul on nüüd $coins münti."
+}

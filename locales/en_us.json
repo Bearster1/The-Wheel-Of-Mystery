@@ -1,9 +1,8 @@
 {
-  "upgrade1": "increase something's probability by one for $upgrade1_cost coins",
-  "upgrade2": "decrease something's probability by one for $upgrade2_cost coins",
-  "upgrade3": "increase a number by one for $upgrade3_cost coins",
-  "upgrade4": "decrease something's cost by one for $upgrade4_cost coins",
-  "upgrade5": "delete one number for $upgrade5_cost coins",
-  "buy_upgrade": "Would you like to buy this upgrade? What is does is ",
-  "show_coins": "You got $number coins. You now have $coins coins."
+  "upgrade1": "Increase probability by one for $upgrade1_cost coins",
+  "upgrade2": "Decrease probability by one for $upgrade2_cost coins",
+  "upgrade3": "Increase number by one for $upgrade3_cost coins",
+  "upgrade4": "Decrease cost by one for $upgrade4_cost coins",
+  "upgrade5": "Delete one number for $upgrade5_cost coins",
+  "message": "You got $number coins. You now have $coins coins."
 }

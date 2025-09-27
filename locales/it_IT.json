@@ -1,0 +1,8 @@
+{
+  "upgrade1": "Aumenta la probabilità di uno per $upgrade1_cost monete",
+  "upgrade2": "Diminuisci la probabilità di uno per $upgrade2_cost monete",
+  "upgrade3": "Aumenta il numero di uno per $upgrade3_cost monete",
+  "upgrade4": "Diminuisci il costo di uno per $upgrade4_cost monete",
+  "upgrade5": "Elimina un numero per $upgrade5_cost monete",
+  "message": "Hai ottenuto $number monete. Ora hai $coins monete."
+}

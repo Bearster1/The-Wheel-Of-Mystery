@@ -1,0 +1,8 @@
+{
+  "upgrade1": "将概率增加一，花费 $upgrade1_cost 枚硬币",
+  "upgrade2": "将概率减少一，花费 $upgrade2_cost 枚硬币",
+  "upgrade3": "将数字增加一，花费 $upgrade3_cost 枚硬币",
+  "upgrade4": "将成本减少一，花费 $upgrade4_cost 枚硬币",
+  "upgrade5": "删除一个数字，花费 $upgrade5_cost 枚硬币",
+  "message": "你获得了 $number 枚硬币。你现在有 $coins 枚硬币。"
+}

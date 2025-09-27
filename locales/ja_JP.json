@@ -1,0 +1,8 @@
+{
+  "upgrade1": "$upgrade1_cost コインで確率を1増やす",
+  "upgrade2": "$upgrade2_cost コインで確率を1減らす",
+  "upgrade3": "$upgrade3_cost コインで数を1増やす",
+  "upgrade4": "$upgrade4_cost コインでコストを1減らす",
+  "upgrade5": "$upgrade5_cost コインで1つの数を削除する",
+  "message": "$number コインを獲得しました。現在、$coins コインがあります。"
+}

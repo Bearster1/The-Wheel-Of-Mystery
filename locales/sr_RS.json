@@ -1,0 +1,8 @@
+{
+  "upgrade1": "Povećajte verovatnoću za jedan za $upgrade1_cost novčića",
+  "upgrade2": "Smanjite verovatnoću za jedan za $upgrade2_cost novčića",
+  "upgrade3": "Povećajte broj za jedan za $upgrade3_cost novčića",
+  "upgrade4": "Smanjite trošak za jedan za $upgrade4_cost novčića",
+  "upgrade5": "Izbrišite jedan broj za $upgrade5_cost novčića",
+  "message": "Dobili ste $number novčića. Sada imate $coins novčića."
+}
