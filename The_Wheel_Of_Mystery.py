@@ -20,28 +20,6 @@ variables = {
 }
 
 
-
-import locale
-import os
-import random
-import json
-import re
-
-variable_pattern = r'(?P<var>\$(?P<arg>\w+|\+|\$))+'
-guh_keys, guh_values = [], []
-coins = 0
-number = 0
-lang_file = []
-variables = {
-    "number": 0,
-    "coins": 0,
-    "upgrade1_cost": 10,
-    "upgrade2_cost": 10,
-    "upgrade3_cost": 10,
-    "upgrade4_cost": 10,
-    "upgrade5_cost": 10
-}
-
 def initialize():
     global lang_file
     current_locale = locale.getdefaultlocale()[0]
@@ -76,7 +54,7 @@ def initialize():
         "upgrade4": 5,
         "upgrade5": 1
     }
-    
+
     for key in guh.keys():
         guh_keys.append(key)
         guh_values.append(guh[key])
@@ -127,7 +105,6 @@ def format_str(string) -> str:
             s += f"{i} "
             continue
         v = compile_variable(m)
-        # print(f"Variable {i} = {v}")
         s += f"{r.sub('arg', v)}"
     return s.rstrip(' ')
 
