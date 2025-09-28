@@ -6,6 +6,7 @@ import re
 
 variable_pattern = r'(?P<var>\$(?P<arg>\w+|\+|\$))+'
 guh_keys, guh_values = [], []
+guh = {}
 coins = 0
 number = 0
 lang_file = []
@@ -14,9 +15,11 @@ variables = {
     "coins": 0,
     "upgrade1_cost": 10,
     "upgrade2_cost": 10,
-    "upgrade3_cost": 10,
-    "upgrade4_cost": 10,
-    "upgrade5_cost": 10
+    "upgrade3_cost": 15,
+    "upgrade4_cost": 20,
+    "upgrade5_cost": 25,
+    "upgrade_cost": 0,
+    "guh": guh
 }
 
 
@@ -50,10 +53,12 @@ def initialize():
         10: 1,
         "upgrade1": 15,
         "upgrade2": 15,
-        "upgrade3": 15,
+        "upgrade3": 10,
         "upgrade4": 5,
         "upgrade5": 1
     }
+
+    variables["guh"] = guh
 
     for key in guh.keys():
         guh_keys.append(key)
@@ -65,21 +70,41 @@ def run():
     global coins
     number = random.choices(guh_keys, weights=guh_values)[0]
     if isinstance(number, str):
-        print(format_str(lang_file["buy_upgrade"]+lang_file[number]))
-        match number:
-            case "upgrade1":
-                print("guh")
-            case "upgrade2":
-                print("guh")
-            case "upgrade3":
-                print("guh")
-            case "upgrade4":
-                print("guh")
-            case "upgrade5":
-                print("guh")
-        number = 0
-        if coins >= 10:
-            number = -10
+        print(format_str(lang_file["buy_upgrade"]+lang_file[number]+"."))
+        buy_upgrade = input("Y/N: ") # this would probably be a button when ported over to c#
+        if buy_upgrade.upper() == "Y":
+            match number:
+                case "upgrade1":
+                    variables["upgrade_cost"] = variables["upgrade1_cost"]
+                case "upgrade2":
+                    variables["upgrade_cost"] = variables["upgrade2_cost"]
+                case "upgrade3":
+                    variables["upgrade_cost"] = variables["upgrade3_cost"]
+                case "upgrade4":
+                    variables["upgrade_cost"] = variables["upgrade4_cost"]
+                case "upgrade5":
+                    variables["upgrade_cost"] = variables["upgrade5_cost"]
+            if coins < variables["upgrade_cost"]:
+                print(format_str(lang_file["insufficent_funds"]))
+                number = 0
+            else:
+                print(format_str(lang_file["upgrade_bought"]))
+                match number:
+                    case "upgrade1":
+                        print(format_str(lang_file["select_keys"] + lang_file["probability_upgrades"]))
+                    case "upgrade2":
+                        variables["upgrade_cost"] = variables["upgrade2_cost"]
+                    case "upgrade3":
+                        variables["upgrade_cost"] = variables["upgrade3_cost"]
+                    case "upgrade4":
+                        variables["upgrade_cost"] = variables["upgrade4_cost"]
+                    case "upgrade5":
+                        variables["upgrade_cost"] = variables["upgrade5_cost"]
+                # I wasn't sure what to do other than duplicated the code so it isn't the most efficent
+                number = variables["upgrade_cost"]
+        else:
+            print(format_str(lang_file["upgrade_not_bought"]))
+            number = 0
 
     coins += number
     variables["number"] = number
@@ -115,5 +140,6 @@ def print_current():
 
 
 initialize()
-run()
-print_current()
+for i in range(100):
+    run()
+    print_current()

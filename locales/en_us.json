@@ -1,8 +1,14 @@
 {
-  "upgrade1": "Increase probability by one for $upgrade1_cost coins",
-  "upgrade2": "Decrease probability by one for $upgrade2_cost coins",
-  "upgrade3": "Increase number by one for $upgrade3_cost coins",
-  "upgrade4": "Decrease cost by one for $upgrade4_cost coins",
-  "upgrade5": "Delete one number for $upgrade5_cost coins",
-  "message": "You got $number coins. You now have $coins coins."
+  "upgrade1": "increase something's probability by one for $upgrade1_cost coins",
+  "upgrade2": "decrease something's probability by one for $upgrade2_cost coins",
+  "upgrade3": "increase a number by one for $upgrade3_cost coins",
+  "upgrade4": "decrease something's cost by one for $upgrade4_cost coins",
+  "upgrade5": "delete one number for $upgrade5_cost coins",
+  "buy_upgrade": "Would you like to buy this upgrade? What it does is ",
+  "show_coins": "You got $number coins. You now have $coins coins.",
+  "insufficent_funds": "You do not have $upgrade_cost coins so you can not buy this upgrade.",
+  "upgrade_not_bought": "Very well, Have a good day. Goodbye traveller",
+  "upgrade_bought": "Thank you for buying this upgrade. You will not regret it. Time to use it!",
+  "select_keys": "Please select the item you want to have this upgrade applied to. ",
+  "probability_upgrades": "Here is a list of the items and their probability: $guh"
 }
